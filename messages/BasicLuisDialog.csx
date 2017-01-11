@@ -25,7 +25,7 @@ public class BasicLuisDialog : LuisDialog<object>
     // Finally replace "MyIntent" with the name of your newly created intent in the following handler
     [LuisIntent("MyIntent")]
     public async Task MyIntent(IDialogContext context, LuisResult result)
-    {
+    { 
         await context.PostAsync($"You have reached the MyIntent intent. You said: {result.Query}"); //
         context.Wait(MessageReceived);
     }
